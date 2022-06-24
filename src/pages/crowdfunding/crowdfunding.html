@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta itemprop="name" content="懂球帝">
+    <meta name="description" itemprop="description" content="">
+    <meta itemprop="image" content="https://img1.qunliao.info/fastdfs3/M00/10/B9/ChONolxrsfSACS2BAAHS9Co6MWQ235.png">
+    <title>懂球帝</title>
+    <%- include src/snippet/header-end.html -%>
+    <script>
+      (function(w, d, s, q, i) {
+        w[q] = w[q] || [];
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+        j.async = true;
+        j.id = 'beacon-aplus';
+        j.src = 'https://d.alicdn.com/alilog/mlog/aplus/' + i + '.js';
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'aplus_queue', '203467608');
+        // 集成应用的appKey
+      aplus_queue.push({
+        action: 'aplus.setMetaInfo',
+        arguments: ['appKey', '61a5a069e014255fcb919ed4']
+      });
+      aplus_queue.push({
+        action: 'aplus.setMetaInfo',
+        arguments: ['aplus-waiting', 'MAN']
+      });
+      </script>
+  </head>
+
+  <body>
+    <%- include src/snippet/body-begin.html -%>
+    <div id="app"></div>
+    <%- include src/snippet/body-end.html -%>
+  </body>
+</html>

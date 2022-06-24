@@ -1,0 +1,58 @@
+@colorRed:#D91E18; // 公共红色
+
+@colorGreen:#34AA58;
+
+@colorGray:#999EA2;
+
+@colorWhite:#fff;
+
+/* 2,3倍图适配 */
+/* .bg-image(@url) {
+  background-image: url("~imgs/icon/"+ $url + "@2x.png");
+  @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+    background-image: url("~imgs/icon/"+ @url + "@3x.png");
+  }
+} */
+
+/* 一像素边框 */
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+      -webkit-transform: scaleY(0.7);
+      transform: scaleY(0.7);
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+  
+}
+
+.textGreen {
+  color: @colorGreen
+}
+.textRed {
+  color: @colorRed
+}
+
+.border-1px(@color:red){
+  position: relative;
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid  @color;/*no*/
+  }
+}
+
+
+.border-none() {
+  &:after {
+    display: none;
+  }
+}

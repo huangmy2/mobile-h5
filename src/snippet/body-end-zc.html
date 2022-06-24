@@ -1,0 +1,12 @@
+<script>
+  // 字节跳动打点的方法
+  window.collectEvent('init', { 
+    app_id: 167102,// 必须替换成申请的 app_id 
+    channel: 'cn',
+    log: true, // 开启调试日志 
+  });
+  window.collectEvent('config', { 
+    user_unique_id: '{{{UUID}}}'
+  });
+  window.collectEvent('start');
+</script>

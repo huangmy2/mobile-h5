@@ -1,0 +1,51 @@
+<!DOCTYPE html><html onselectstart="return false"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui"><meta http-equiv=refresh content="0; url='https://n.xiaohongdan.com/webapp/footerball_lottery.html?way=native#/'"><title>足彩充值中心</title><link href=/static/css/home.eae9c14382fa45b3ef6d76f171a6dd8c.css rel=stylesheet></head><body><div id=app></div><script src=../../../static/js/jQuery-2.1.4.min.js></script><script type=text/javascript>var mainData = {
+  path: "https://" + getHostName(),
+  tooken: '',
+  // path:"https://test1-mall.dongqiudi.com"
+}
+function getHostName() {
+  var domian = {
+    'test1-front.dongqiudi.com': 'test1-mall.dongqiudi.com',
+    'beta-front.dongqiudi.com': 'beta-mall.dongqiudi.com',
+    'front.dongqiudi.com': 'mall.dongqiudi.com'
+  };
+  return domian[location.hostname]
+}
+window.browers = {};
+var ua = navigator.userAgent.toLowerCase();
+browers.iPad = ua.match(/ipad/);
+browers.iPhone = ua.match(/iphone/);
+browers.Android = ua.match(/android/);
+browers.iOS = ua.match(/ipad|iphone|ios/);
+browers.ie = ua.match(/iemobile/);
+isWifi = ua.match(/nettype\/wifi|technology\/wifi/);
+force_ssl = ua.match(/Android (5|6)/i);
+is_ios_6 = ua.match(/iOS 6/i);
+is_liveapp = ua.match(/LiveApp/i);
+
+var app_ua = ua.match(/NewsApp\/([\d\.]+)/i),
+  version;
+
+if (app_ua) {
+  v = app_ua[1].replace(eval('/\\./ig'), '');
+  version = parseInt(v);
+  if (v.length == 2) {
+    version = version * 10;
+  }
+}
+
+function connectWebViewJavascriptBridge(callback) {
+  if (window.WebViewJavascriptBridge) {
+    callback(WebViewJavascriptBridge)
+  } else {
+    document.addEventListener('WebViewJavascriptBridgeReady', function() {
+      callback(WebViewJavascriptBridge)
+    }, false)
+  }
+};
+var jump_head = "";
+if (browers.iOS) {
+  jump_head = "dongqiudi:///url/https:" + location.hostname;
+}if (browers.Android) {
+  jump_head = "";
+}</script><script type=text/javascript src=/static/js/vendor.74489a4beb26d67a1e70.js></script><script type=text/javascript src=/static/js/home.d79377064e58720c45b3.js></script></body></html>
